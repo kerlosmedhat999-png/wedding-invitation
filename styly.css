@@ -478,7 +478,7 @@ button { cursor: pointer; }
   }
 
   .love-message p {
-    font-size: 3px;
+    font-size:20px;
     line-height: 1.65;
   }
 }
