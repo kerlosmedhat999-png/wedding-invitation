@@ -179,7 +179,10 @@ button { cursor: pointer; }
 }
 
 .photo-placeholder span { font-size: 38px; }
-.photo-placeholder strong { font: 400 44px 'Great Vibes', cursive; }
+
+.photo-placeholder strong {
+  font: 400 44px 'Great Vibes', cursive;
+}
 
 .photo-placeholder small {
   font: 10px 'Montserrat', sans-serif;
@@ -228,7 +231,10 @@ button { cursor: pointer; }
   letter-spacing: .2em;
 }
 
-.wedding-date b { color: var(--gold); font-weight: 400; }
+.wedding-date b {
+  color: var(--gold);
+  font-weight: 400;
+}
 
 .countdown-section {
   margin: 0 auto 34px;
@@ -303,7 +309,11 @@ button { cursor: pointer; }
 }
 
 .event-card { padding: 4px 8px 10px; }
-.event-icon { font-size: 27px; color: var(--gold); }
+
+.event-icon {
+  font-size: 27px;
+  color: var(--gold);
+}
 
 .event-card h4 {
   margin: 5px 0 8px;
@@ -345,7 +355,11 @@ button { cursor: pointer; }
 }
 
 .text-link:hover { background: #f0e8d0; }
-.event-divider { color: var(--gold); margin: 18px 0 22px; }
+
+.event-divider {
+  color: var(--gold);
+  margin: 18px 0 22px;
+}
 
 .section-subtitle {
   margin: -9px 0 18px;
@@ -367,28 +381,45 @@ button { cursor: pointer; }
   background: #eee7d7;
 }
 
-/* Photo gallery */
+/* PHOTO GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+  align-items: stretch;
 }
 
 .gallery-grid img {
   display: block;
   width: 100%;
-  height: 300px;
+  height: 180px;
   object-fit: cover;
   border: 1px solid var(--line);
   padding: 4px;
   background: white;
 }
 
-/* First and fourth photos are large */
+/* First two photos: same size and tall */
 .gallery-grid img:nth-child(1),
+.gallery-grid img:nth-child(2) {
+  height: 320px;
+}
+
+/* Third and fourth photos: small */
+.gallery-grid img:nth-child(3),
 .gallery-grid img:nth-child(4) {
+  height: 180px;
+}
+
+/* Fifth photo: wide */
+.gallery-grid img:nth-child(5) {
   grid-column: 1 / -1;
-  height: 380px;
+  height: 240px;
+}
+
+/* All remaining photos: small */
+.gallery-grid img:nth-child(n+6) {
+  height: 180px;
 }
 
 .footer {
@@ -428,7 +459,9 @@ button { cursor: pointer; }
   box-shadow: 0 5px 20px #8a6b252e;
 }
 
-.music-button.is-playing { animation: musicPulse 2s ease-in-out infinite; }
+.music-button.is-playing {
+  animation: musicPulse 2s ease-in-out infinite;
+}
 
 @keyframes musicPulse {
   0%, 100% { box-shadow: 0 0 0 0 #c0a34345; }
@@ -438,25 +471,48 @@ button { cursor: pointer; }
 @media (min-width: 700px) {
   .invitation { padding-top: 35px; }
   .paper-frame { padding-top: 32px; }
-  .gallery-grid img { height: 260px; }
 
   .gallery-grid img:nth-child(1),
-  .gallery-grid img:nth-child(4) {
-    height: 340px;
+  .gallery-grid img:nth-child(2) {
+    height: 360px;
+  }
+
+  .gallery-grid img:nth-child(3),
+  .gallery-grid img:nth-child(4),
+  .gallery-grid img:nth-child(n+6) {
+    height: 220px;
+  }
+
+  .gallery-grid img:nth-child(5) {
+    height: 280px;
   }
 }
 
 @media (max-width: 390px) {
   .section-title { gap: 6px; }
-  .section-title h3 { font-size: 11px; letter-spacing: .1em; }
+
+  .section-title h3 {
+    font-size: 11px;
+    letter-spacing: .1em;
+  }
+
   .count-box span { font-size: 8px; }
+
   .gallery-grid { gap: 7px; }
 
-  .gallery-grid img { height: 145px; }
-
   .gallery-grid img:nth-child(1),
-  .gallery-grid img:nth-child(4) {
-    height: 220px;
+  .gallery-grid img:nth-child(2) {
+    height: 260px;
+  }
+
+  .gallery-grid img:nth-child(3),
+  .gallery-grid img:nth-child(4),
+  .gallery-grid img:nth-child(n+6) {
+    height: 135px;
+  }
+
+  .gallery-grid img:nth-child(5) {
+    height: 190px;
   }
 
   .opening-card { min-height: 460px; }
