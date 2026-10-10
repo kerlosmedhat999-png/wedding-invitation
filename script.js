@@ -36,10 +36,7 @@ async function playBackgroundMusic() {
 if (!backgroundMusic) return;
 
 try {
-  await backgroundMusic.volume = 1;
-backgroundMusic.play().catch(error => {
-  console.log("Music playback was blocked:", error);
-});
+  await backgroundMusic.play();
 
   if (musicButton) {
     musicButton.classList.add("is-playing");
