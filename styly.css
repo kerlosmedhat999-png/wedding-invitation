@@ -421,26 +421,14 @@ button {
   background: white;
 }
 
-/* أول صورتين طوال وقد بعض */
-.gallery-grid img:nth-child(1),
-.gallery-grid img:nth-child(2) {
-  height: 320px;
-}
-
-/* الصورة الثالثة والرابعة صغيرتين */
-.gallery-grid img:nth-child(3),
-.gallery-grid img:nth-child(4) {
-  height: 180px;
-}
-
-/* الصورة الخامسة عريضة */
-.gallery-grid img:nth-child(5) {
+/* أول صورة كبيرة وطويلة لوحدها */
+.gallery-grid img:nth-child(1) {
   grid-column: 1 / -1;
-  height: 240px;
+  height: 360px;
 }
 
-/* باقي الصور صغيرة جنب بعض */
-.gallery-grid img:nth-child(n+6) {
+/* باقي الصور كلها نفس المقاس */
+.gallery-grid img:nth-child(n+2) {
   height: 180px;
 }
 
@@ -489,6 +477,7 @@ button {
   0%, 100% {
     box-shadow: 0 0 0 0 #c0a34345;
   }
+
   50% {
     box-shadow: 0 0 0 9px #c0a34300;
   }
@@ -503,19 +492,12 @@ button {
     padding-top: 32px;
   }
 
-  .gallery-grid img:nth-child(1),
-  .gallery-grid img:nth-child(2) {
-    height: 360px;
+  .gallery-grid img:nth-child(1) {
+    height: 450px;
   }
 
-  .gallery-grid img:nth-child(3),
-  .gallery-grid img:nth-child(4),
-  .gallery-grid img:nth-child(n+6) {
-    height: 220px;
-  }
-
-  .gallery-grid img:nth-child(5) {
-    height: 280px;
+  .gallery-grid img:nth-child(n+2) {
+    height: 260px;
   }
 }
 
@@ -537,19 +519,12 @@ button {
     gap: 7px;
   }
 
-  .gallery-grid img:nth-child(1),
-  .gallery-grid img:nth-child(2) {
-    height: 260px;
+  .gallery-grid img:nth-child(1) {
+    height: 320px;
   }
 
-  .gallery-grid img:nth-child(3),
-  .gallery-grid img:nth-child(4),
-  .gallery-grid img:nth-child(n+6) {
-    height: 135px;
-  }
-
-  .gallery-grid img:nth-child(5) {
-    height: 190px;
+  .gallery-grid img:nth-child(n+2) {
+    height: 145px;
   }
 
   .opening-card {
