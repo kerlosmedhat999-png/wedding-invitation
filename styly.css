@@ -9,9 +9,13 @@
   --line: rgba(169, 139, 55, .55);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -20,9 +24,17 @@ body {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
-button, a { -webkit-tap-highlight-color: transparent; }
-button { cursor: pointer; }
-.hidden { display: none !important; }
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
 
 .opening {
   min-height: 100vh;
@@ -121,7 +133,9 @@ button { cursor: pointer; }
   color: var(--muted);
 }
 
-.invitation { padding: 20px 12px 40px; }
+.invitation {
+  padding: 20px 12px 40px;
+}
 
 .paper-frame {
   max-width: 780px;
@@ -178,7 +192,9 @@ button { cursor: pointer; }
   color: var(--gold-dark);
 }
 
-.photo-placeholder span { font-size: 38px; }
+.photo-placeholder span {
+  font-size: 38px;
+}
 
 .photo-placeholder strong {
   font: 400 44px 'Great Vibes', cursive;
@@ -262,7 +278,9 @@ button { cursor: pointer; }
   border-right: 1px solid #dfd4b9;
 }
 
-.count-box:last-child { border-right: 0; }
+.count-box:last-child {
+  border-right: 0;
+}
 
 .count-box strong {
   font-size: clamp(25px, 7vw, 44px);
@@ -308,7 +326,9 @@ button { cursor: pointer; }
   white-space: nowrap;
 }
 
-.event-card { padding: 4px 8px 10px; }
+.event-card {
+  padding: 4px 8px 10px;
+}
 
 .event-icon {
   font-size: 27px;
@@ -354,7 +374,9 @@ button { cursor: pointer; }
   text-decoration: none;
 }
 
-.text-link:hover { background: #f0e8d0; }
+.text-link:hover {
+  background: #f0e8d0;
+}
 
 .event-divider {
   color: var(--gold);
@@ -399,25 +421,25 @@ button { cursor: pointer; }
   background: white;
 }
 
-/* First two photos: same size and tall */
+/* أول صورتين طوال وقد بعض */
 .gallery-grid img:nth-child(1),
 .gallery-grid img:nth-child(2) {
   height: 320px;
 }
 
-/* Third and fourth photos: small */
+/* الصورة الثالثة والرابعة صغيرتين */
 .gallery-grid img:nth-child(3),
 .gallery-grid img:nth-child(4) {
   height: 180px;
 }
 
-/* Fifth photo: wide */
+/* الصورة الخامسة عريضة */
 .gallery-grid img:nth-child(5) {
   grid-column: 1 / -1;
   height: 240px;
 }
 
-/* All remaining photos: small */
+/* باقي الصور صغيرة جنب بعض */
 .gallery-grid img:nth-child(n+6) {
   height: 180px;
 }
@@ -464,13 +486,22 @@ button { cursor: pointer; }
 }
 
 @keyframes musicPulse {
-  0%, 100% { box-shadow: 0 0 0 0 #c0a34345; }
-  50% { box-shadow: 0 0 0 9px #c0a34300; }
+  0%, 100% {
+    box-shadow: 0 0 0 0 #c0a34345;
+  }
+  50% {
+    box-shadow: 0 0 0 9px #c0a34300;
+  }
 }
 
 @media (min-width: 700px) {
-  .invitation { padding-top: 35px; }
-  .paper-frame { padding-top: 32px; }
+  .invitation {
+    padding-top: 35px;
+  }
+
+  .paper-frame {
+    padding-top: 32px;
+  }
 
   .gallery-grid img:nth-child(1),
   .gallery-grid img:nth-child(2) {
@@ -489,16 +520,22 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 390px) {
-  .section-title { gap: 6px; }
+  .section-title {
+    gap: 6px;
+  }
 
   .section-title h3 {
     font-size: 11px;
     letter-spacing: .1em;
   }
 
-  .count-box span { font-size: 8px; }
+  .count-box span {
+    font-size: 8px;
+  }
 
-  .gallery-grid { gap: 7px; }
+  .gallery-grid {
+    gap: 7px;
+  }
 
   .gallery-grid img:nth-child(1),
   .gallery-grid img:nth-child(2) {
@@ -515,7 +552,9 @@ button { cursor: pointer; }
     height: 190px;
   }
 
-  .opening-card { min-height: 460px; }
+  .opening-card {
+    min-height: 460px;
+  }
 }
 
 .love-message {
