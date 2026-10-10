@@ -180,6 +180,7 @@ button { cursor: pointer; }
 
 .photo-placeholder span { font-size: 38px; }
 .photo-placeholder strong { font: 400 44px 'Great Vibes', cursive; }
+
 .photo-placeholder small {
   font: 10px 'Montserrat', sans-serif;
   text-align: center;
@@ -366,9 +367,10 @@ button { cursor: pointer; }
   background: #eee7d7;
 }
 
+/* Photo gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -380,6 +382,13 @@ button { cursor: pointer; }
   border: 1px solid var(--line);
   padding: 4px;
   background: white;
+}
+
+/* First and fourth photos are large */
+.gallery-grid img:nth-child(1),
+.gallery-grid img:nth-child(4) {
+  grid-column: 1 / -1;
+  height: 380px;
 }
 
 .footer {
@@ -430,6 +439,11 @@ button { cursor: pointer; }
   .invitation { padding-top: 35px; }
   .paper-frame { padding-top: 32px; }
   .gallery-grid img { height: 260px; }
+
+  .gallery-grid img:nth-child(1),
+  .gallery-grid img:nth-child(4) {
+    height: 340px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -437,9 +451,17 @@ button { cursor: pointer; }
   .section-title h3 { font-size: 11px; letter-spacing: .1em; }
   .count-box span { font-size: 8px; }
   .gallery-grid { gap: 7px; }
+
   .gallery-grid img { height: 145px; }
+
+  .gallery-grid img:nth-child(1),
+  .gallery-grid img:nth-child(4) {
+    height: 220px;
+  }
+
   .opening-card { min-height: 460px; }
 }
+
 .love-message {
   max-width: 470px;
   margin: 22px auto 28px;
@@ -478,7 +500,7 @@ button { cursor: pointer; }
   }
 
   .love-message p {
-    font-size:20px;
+    font-size: 20px;
     line-height: 1.65;
   }
 }
